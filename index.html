@@ -33,6 +33,21 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+   <script type="text/javascript"> window.flutterWebRenderer = "html"; </script>
+    <script src="flutter_bootstrap.js" async>
+    const useHtml = true;
+
+    const config = {
+     renderer: useHtml ? "html" : "canvaskit",
+
+   };
+   _flutter.loader.load({
+     config: config,
+   });
+
+
+  </script>
+  
+<!--   <script src="flutter_bootstrap.js" async></script> -->
 </body>
 </html>
